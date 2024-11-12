@@ -3,15 +3,11 @@ using UnityEngine;
 using UnityEngine.UI;
 using Random = UnityEngine.Random;
 
-public class AI : MonoBehaviour
+public class AI : FigthManager
 {
-    public Slider Playerhp;
      public int healthPlayer = 100;
+     public int attackAI = 10;
      private int HealAI = 30;
-     
-     public AIData data;
-
-     public AIDataInstance runtimeData;
 
      public int damages = 10;
     public enum AIState
@@ -54,14 +50,14 @@ public class AI : MonoBehaviour
             return;
         }
      
-        Attack(10);
+        Attack();
     }
 
-    public void Attack(int damages)
+    public void Attack()
     {
-        runtimeData.hp -= damages;
+        runtimeData.hp -= attackAI ;
         runtimeData.hp = Mathf.Clamp(healthPlayer, 0, 100);
-        Playerhp.value = runtimeData.hp;
+        Playerhp.value = FigthManager.instance.runtimeData.hp;
     }
     
     public void Heal()
@@ -79,7 +75,7 @@ public class AI : MonoBehaviour
         var rand = Random.Range(0, 100);
         if (rand > 20)
         {
-            Attack(10);
+            Attack();
             return;
         } 
         

@@ -29,8 +29,6 @@ public class FigthManager : MonoBehaviour
 
     public PlayerDataInstance runtimeData;
 
-    public int damages = 10;
-
     private void Start()
     {
         instance = this;
@@ -100,15 +98,15 @@ public class FigthManager : MonoBehaviour
     {
         runtimeData.hp -= damages;
         hpAI = Mathf.Clamp(hpAI,0,100);
-        AIhp.value = hpAI;
+        AIhp.value = FigthManager.instance.runtimeData.hp;
         ChangeGameState(GameState.AI);
     }
 
     public void Health()
     { 
         runtimeData.hp += Heal;
-        hpPlayer = Mathf.Clamp(hpPlayer, 0, 100);
-        Playerhp.value = hpPlayer;
+        runtimeData.hp = Mathf.Clamp(hpPlayer, 0, 100);
+        Playerhp.value = FigthManager.instance.runtimeData.hp;
         ChangeGameState(GameState.AI);
     }
 }

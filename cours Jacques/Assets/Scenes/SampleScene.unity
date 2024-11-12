@@ -2965,9 +2965,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e10adf826d7b7844d81096c620b0c8cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ia: {fileID: 0}
+  Player: {fileID: 0}
+  AI: {fileID: 0}
+  AIhp: {fileID: 0}
+  Playerhp: {fileID: 2045138301}
+  hpPlayer: 100
+  hpAI: 100
+  Heal: 30
+  data: {fileID: 11400000, guid: 9b4bf3a922587a647950404fb030a06e, type: 2}
+  damages: 10
+  m_currentGameState: 0
   Playerhp: {fileID: 2045138301}
   healthPlayer: 100
-  data: {fileID: 11400000, guid: 9b4bf3a922587a647950404fb030a06e, type: 2}
+  attackAI: 10
   damages: 10
   m_currentAIState: 1
 --- !u!1 &1478306700
