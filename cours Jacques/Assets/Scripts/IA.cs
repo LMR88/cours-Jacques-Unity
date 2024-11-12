@@ -7,8 +7,13 @@ public class AI : MonoBehaviour
 {
     public Slider Playerhp;
      public int healthPlayer = 100;
-     private int attackAI = 10;
      private int HealAI = 30;
+     
+     public AIData data;
+
+     public AIDataInstance runtimeData;
+
+     public int damages = 10;
     public enum AIState
     {
         loosing,
@@ -49,14 +54,14 @@ public class AI : MonoBehaviour
             return;
         }
      
-        Attack();
+        Attack(10);
     }
 
-    public void Attack()
+    public void Attack(int damages)
     {
-        healthPlayer -= attackAI;
-        healthPlayer = Mathf.Clamp(healthPlayer, 0, 100);
-        Playerhp.value = healthPlayer;
+        runtimeData.hp -= damages;
+        runtimeData.hp = Mathf.Clamp(healthPlayer, 0, 100);
+        Playerhp.value = runtimeData.hp;
     }
     
     public void Heal()
@@ -74,7 +79,7 @@ public class AI : MonoBehaviour
         var rand = Random.Range(0, 100);
         if (rand > 20)
         {
-            Attack();
+            Attack(10);
             return;
         } 
         

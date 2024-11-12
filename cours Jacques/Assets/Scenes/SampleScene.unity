@@ -453,6 +453,8 @@ MonoBehaviour:
   hpPlayer: 100
   hpAI: 100
   Heal: 30
+  data: {fileID: 11400000, guid: 7f5cc6bf571cee4448aed123e7e92fc8, type: 2}
+  damages: 10
   m_currentGameState: 0
 --- !u!1 &126976439
 GameObject:
@@ -615,11 +617,11 @@ MonoBehaviour:
       - m_Target: {fileID: 1827331547}
         m_TargetAssemblyTypeName: FigthManager, Assembly-CSharp
         m_MethodName: Attack
-        m_Mode: 1
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 10
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -1697,11 +1699,11 @@ MonoBehaviour:
       - m_Target: {fileID: 1827331547}
         m_TargetAssemblyTypeName: FigthManager, Assembly-CSharp
         m_MethodName: Attack
-        m_Mode: 1
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 10
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -2965,6 +2967,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Playerhp: {fileID: 2045138301}
   healthPlayer: 100
+  data: {fileID: 11400000, guid: 9b4bf3a922587a647950404fb030a06e, type: 2}
+  damages: 10
   m_currentAIState: 1
 --- !u!1 &1478306700
 GameObject:
@@ -3911,6 +3915,8 @@ MonoBehaviour:
   hpPlayer: 100
   hpAI: 100
   Heal: 30
+  data: {fileID: 11400000, guid: 7f5cc6bf571cee4448aed123e7e92fc8, type: 2}
+  damages: 10
   m_currentGameState: 0
 --- !u!1 &2045138300
 GameObject:

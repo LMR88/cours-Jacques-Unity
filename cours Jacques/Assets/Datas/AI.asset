@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18ac713a74f6441ba846de6427c5d569, type: 3}
+  m_Name: AI
+  m_EditorClassIdentifier: 
+  <hp>k__BackingField: 10
+  <armor>k__BackingField: 12
+  <speed>k__BackingField: 5
+  <spell>k__BackingField: {fileID: 11400000, guid: dcbe16b53246776499c9f6e03738c50f,
+    type: 2}
+  <spell2>k__BackingField: {fileID: 11400000, guid: 46023cdb6a3826043ae527ec4c6d6c0f,
+    type: 2}

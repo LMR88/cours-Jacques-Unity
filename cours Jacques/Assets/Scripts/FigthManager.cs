@@ -8,18 +8,37 @@ using UnityEngine.UI;
 public class FigthManager : MonoBehaviour
 {
     [SerializeField] private AI ia;
+    
     public static FigthManager instance;
+    
     [SerializeField] public GameObject Player;
+    
     [SerializeField] public GameObject AI;
+    
     public Slider AIhp;
+    
     public Slider Playerhp;
+    
     [SerializeField] public int hpPlayer = 100;
+    
     [SerializeField] public int hpAI = 100;
+    
     [SerializeField] private int Heal = 30;
+
+    public PlayerData data;
+
+    public PlayerDataInstance runtimeData;
+
+    public int damages = 10;
 
     private void Start()
     {
         instance = this;
+    }
+
+    public void Awake()
+    {
+        runtimeData = data.Instance();
     }
 
     public enum GameState
@@ -77,9 +96,9 @@ public class FigthManager : MonoBehaviour
         ia.ManageAITurn();
     }
     
-    public void Attack()
+    public void Attack(int damages)
     {
-        hpAI -= 10;
+        runtimeData.hp -= damages;
         hpAI = Mathf.Clamp(hpAI,0,100);
         AIhp.value = hpAI;
         ChangeGameState(GameState.AI);
@@ -87,7 +106,7 @@ public class FigthManager : MonoBehaviour
 
     public void Health()
     { 
-        hpPlayer += Heal;
+        runtimeData.hp += Heal;
         hpPlayer = Mathf.Clamp(hpPlayer, 0, 100);
         Playerhp.value = hpPlayer;
         ChangeGameState(GameState.AI);
